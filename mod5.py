@@ -1,8 +1,2 @@
 def closest_mod_5(x):
-    c = 0
-    if x % 5 == 0:
-        return x
-    else:
-        while x % 5 != 0:
-            x += 1
-    return x
+    return x if x % 5 == 0 else x + (5 - x % 5)
