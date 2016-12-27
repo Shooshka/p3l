@@ -1,13 +1,10 @@
-import secrets
+from secrets import choice, randbelow
 import pyperclip
 
 letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-letters_lst = []
-letterssmall_lst = []
+l1, l2 = [], []
 
 for i in letters:
-    letters_lst.append(i)
-    letterssmall_lst.append(i.lower())
-gen = secrets.choice
-pwd = gen(letters_lst) + gen(letters_lst) + gen(letters_lst) + gen(letterssmall_lst) + gen(letterssmall_lst) + gen(letterssmall_lst) + gen(letterssmall_lst) + gen(letterssmall_lst) + str(secrets.randbelow(9))
-pyperclip.copy(pwd)
+    l1.append(i)
+    l2.append(i.lower())
+pyperclip.copy(choice(l1) + choice(l1) + choice(l1) + choice(l2) + choice(l2) + choice(l2) + choice(l2) + choice(l2) + str(randbelow(9)))
