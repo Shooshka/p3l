@@ -6,3 +6,7 @@ class MyClass:
 
 print(MyClass.a)
 print(MyClass.func())
+
+x = MyClass()
+print(type(x))
+print(type(MyClass))
