@@ -1,14 +1,17 @@
 from secrets import choice, randbelow
+import string
 import pyperclip
 from tkinter import *
 
 def gen(event):
-    letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    l1, l2 = [], []
-    for i in letters:
-        l1.append(i)
-        l2.append(i.lower())
-    pyperclip.copy(choice(l1) + choice(l1) + choice(l1) + choice(l2) + choice(l2) + choice(l2) + choice(l2) + choice(l2) + str(randbelow(9)))
+    alphabet = string.ascii_letters + string.digits
+    while True:
+        password = ''.join(choice(alphabet) for i in range(8))
+        if (any(c.islower() for c in password)
+            and any(c.isupper() for c in password)
+            and sum(c.isdigit() for c in password) >= 1):
+            break
+    pyperclip.copy(password)
 
 root = Tk()
 btn = Button(root,                  #родительское окно
