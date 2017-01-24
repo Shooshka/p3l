@@ -3,7 +3,7 @@ import string
 import pyperclip
 from tkinter import Tk, Button
 
-def gen(event):
+def gen():
     alphabet = string.ascii_letters + string.digits
     while True:
         password = ''.join(choice(alphabet) for i in range(8))
@@ -14,7 +14,6 @@ def gen(event):
     pyperclip.copy(password)
 
 root = Tk()
-btn = Button(root, text="Сгенерировать", width=30, height=5, bg="white", fg="black")
-btn.bind("<Button-1>", gen)
+btn = Button(root, text="Сгенерировать", width=30, height=5, bg="white", fg="black", command=gen)
 btn.pack()
 root.mainloop()
