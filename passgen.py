@@ -1,7 +1,7 @@
 from secrets import choice
 import string
 import pyperclip
-from tkinter import *
+from tkinter import Tk, Button
 
 def gen(event):
     alphabet = string.ascii_letters + string.digits
