@@ -14,10 +14,7 @@ def gen(event):
     pyperclip.copy(password)
 
 root = Tk()
-btn = Button(root,
-             text="Сгенерировать",
-             width=30,height=5,
-             bg="white",fg="black")
+btn = Button(root, text="Сгенерировать", width=30, height=5, bg="white", fg="black")
 btn.bind("<Button-1>", gen)
 btn.pack()
 root.mainloop()
