@@ -1,6 +1,6 @@
-from secrets import choice
 import string
 import pyperclip
+from secrets import choice
 from tkinter import Tk, Button
 
 def gen():
@@ -14,6 +14,6 @@ def gen():
     pyperclip.copy(password)
 
 root = Tk()
-btn = Button(root, text="Сгенерировать", width=30, height=5, bg="white", fg="black", command=gen)
+btn = Button(root, text='Сгенерировать', width=30, height=5, bg='white', fg='black', command=gen)
 btn.pack()
 root.mainloop()
